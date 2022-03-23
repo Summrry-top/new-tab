@@ -1,0 +1,107 @@
+/* 重置样式 */
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+}
+input {
+  outline: none;
+}
+/* 背景图片 */
+#bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* object-position: center center; */
+}
+
+/* 搜索 */
+input,
+.engine-warp {
+  background-color: rgba(0, 0, 0, 0.1);
+  /* filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.25)); */
+  border: 2px solid;
+  color: #fff;
+  height: 50px;
+  box-sizing: border-box;
+}
+.search-box {
+  position: absolute;
+  top: 17vh;
+  left: 50%;
+  color: #fff;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+.search-box img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+/* 搜索引擎 */
+.engine-warp {
+  display: flex;
+  border-radius: 50px 0 0 50px;
+  border-right: none;
+  font-size: 12px;
+  white-space: nowrap;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon-down {
+  font-size: 0;
+  border: 4px solid;
+  margin-left: 5px;
+  border-color: rgba(255, 255, 255, 0.7) transparent transparent;
+}
+.engine-current {
+  padding-left: 20px;
+}
+.item {
+  padding: 5px 20px;
+}
+.engine-list {
+  position: absolute;
+  top: 50px;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: scale(0);
+  transition: transform 0.3s linear;
+}
+.engine-list.show {
+  transform: scale(1);
+}
+
+.item:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* 搜索框 */
+#search {
+  width: 400px;
+  height: 50px;
+  padding: 0 18px;
+  border-left: 0;
+  border-right: 0;
+}
+#search::placeholder {
+  color: #fff;
+}
+/* 图片提交按钮 */
+.search-icon {
+  width: 56px;
+  padding: 10px 0;
+  border-left: 0;
+  border-radius: 0 50px 50px 0;
+  transition: padding 0.3s linear;
+}
+.search-icon:hover {
+  padding-top: 12px;
+}
